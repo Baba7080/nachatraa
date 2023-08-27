@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Address{% endblock title %}
+{% block post %}
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-3">
+            <form method ='POST' enctype='multipart/form'>
+                {% csrf_token %}
+                {% comment %} <img class="gb_Ia gbip gb_fb my-4" src="{% static 'app/images/baraatimages/edu.png'%} " style="height: 50%%; width: 40%;" >  {% endcomment %}
+                <img class="rounded-circle account-img mt-5" src="{{ request.user.profile.image.url }}" alt="piic" style="height: 70%; width: 55%;"> 
+        
+                {% comment %} <a href="{% url 'updation' %}"><svg class="gb_lb" style="color:green;" enable-background="new 0 0 24 24" focusable="false" height="26" viewBox="0 0 24 24" width="18" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M20 5h-3.17L15 3H9L7.17 5H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 14H4V7h16v12zM12 9c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"></path></svg></a> {% endcomment %}
+        
+            
+            </form>
+        </div>
+    </div>
+    {% comment %} <div class="media">
+        <img class="rounded-circle account-img" src="{{ user.profile.images.url }}" >
+        
+        
+      </div> {% endcomment %}
+
+
+ <div class="row">
+    {% comment %} {% for i in p %} {% endcomment %}
+        {% comment %} <img class="rounded-circle account-img" src="{{ request.user.profile.image.url }}" alt="piicc">  {% endcomment %}
+    {% comment %} {% endfor %} {% endcomment %}
+   <div> <h3>Welcome {{request.user}}</h3>
+  <div class="col-sm-2 border-end">
+    
+   <ul class="list-unstyled">
+    <li class="d-grid"><a href="{% url 'profile' %}" class="btn {{active}}">Profile</a></li>
+    {% if request.user.is_superuser %}
+    <li class="d-grid"><a href="#" class="btn ">send_mail</a></>
+    
+    {% else %}
+    {% endif %}
+    
+   </ul>
+  </div>
+  <div class="col-sm-9 offset-sm-1">
+   <div class="row">
+   {% if v == TUDENT %}
+    <p>HELOO</p>
+   
+   {% else %}
+   <p>Kahek</p>
+   {% endif %}
+   
+    <p id="p1">www.yantraeducare.com/{{user.profile.code}}/
+    {% comment %} {% for i in user_detail %}
+        {% if i.is_superuser %}
+        <td class="text-center"><span class="btn btn-success">You</span></td>
+        {% else %}
+        <td class="text-center"><span class="btn btn-info">Agent</span></td>
+        {% endif %}
+    {% endfor %} {% endcomment %}
+    
+    <button onclick="copyToClipboard('#p1')"><i class="far fa-copy"></i></button> </p><br>
+    <h3>UserCode-- {{user.profile.code}}</h3>
+    {{user.email}}<br>
+    date_of join:{{user.date_joined}}<br>
+    
+    {% for p in maill %}
+        date updated{{p.updated}}<br>
+        date created{{p.created}}
+    
+    {% endfor %}
+<br>
+        
+   </div>
+   <p id="p1">www.yantraeducare.com/{{request.user.username}}/</p>
+
+   <button onclick="copyToClipboard('#p1')">Copy TEXT 1</button> 
+  </div>
+ </div>
+</div>
+{% endblock post %}
