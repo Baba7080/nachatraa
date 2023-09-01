@@ -64,3 +64,18 @@ class LoginForm(AuthenticationForm):
     username = UsernameField(widget=forms.TextInput(attrs={'autofocus':True, 'class':'form-control'}))
     password = forms.CharField(label=_("Password"),strip=False,widget=forms.PasswordInput(attrs=
         {'autocomplete':'current-password', 'class':'form-control'}))
+
+
+
+class PujaBook(forms.ModelForm):
+    userName = forms.CharField(label='Full Name', max_length=100)
+    mail = forms.EmailField(label='Email Address')
+    phoneNo = forms.CharField(label='Contact Number')
+    selectedDate = forms.DateField(label='Select a date', widget=forms.DateInput(attrs={'type': 'date'}))
+    selectedTime = forms.TimeField(label='Select a time', widget=forms.TimeInput(attrs={'type': 'time'}))
+    # puja_id = forms.IntegerField(widget=forms.HiddenInput())
+    class Meta:
+        model = PujaForm
+        fields = ['userName','mail','phoneNo','selectedDate','selectedTime']
+    # def save(self, commit=True):
+    #     user = super().save(commit=False)

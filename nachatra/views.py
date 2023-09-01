@@ -7,7 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 def home(request):
     # astro_users = Profile.objects.filter(Role='Astro')
-    astro_users = Profile.objects.all()
+    astro_users = Pooja.objects.all().order_by()[:4]
     print(astro_users)
     context = {'astro': astro_users ,"profile":"2"}
     return render(request, 'home.html',context)

@@ -15,11 +15,9 @@
           <div class="intro-left tm-bg-dark">
             <h2 class="mb-4">Welcome to Nachatra</h2>
             <p class="mb-4">
-              This HTML template has a motion video background loop which is provided by <a rel="sponsored" href="https://getfreepictures.com" target="_blank">Get Free Pictures</a>. This is
-              one-page responsive layout for your websites. Feel
-            free to use this for a commercial purpose. </p>
+              Welcome to Nakshtravani, your all-inclusive astrology website designed to illuminate your journey through life's cosmic tapestry. Unveil the secrets of the stars and harness their wisdom to navigate the complexities of your unique path.  </p>
             <p class="mb-0">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate incidunt consequatur eveniet impedit praesentium. Ipsam voluptatum molestias ex corrupti laborum repellat. Cum blanditiis temporibus quia consequatur itaque explicabo assumenda eos! . </p>
+              Embark on a profound exploration of self-discovery as Nakshtravani merges ancient astrological traditions with cutting-edge technology. Our app provides you with a seamless experience to delve into the mysteries of the universe, offering personalized insights and guidance tailored to your birth chart.</p>
           </div>
           <div class="intro-right">
             <img src="{% static 'img/home-img-1.jpg'%}" alt="Image" class="img-fluid intro-img-1">
@@ -136,12 +134,45 @@
         <div class="tm-bg-dark content-pad">
           <h2 class="mb-4">About our company</h2>
           <p class="mb-4">
-            You are <span class="highlight">allowed</span> to use Nachatra HTML Template for your websites. You are not allowed to re-distribute this template ZIP file on any Free CSS template collection website. Illegal redistribution is strongly prohibited.
-          </p>
+            
+Welcome to Nakshtravani, an all-encompassing astrology platform crafted to illuminate your voyage through life's celestial intricacies. Here, you'll uncover the enigmas held by the stars and harness their sagacity to navigate the intricacies of your distinct journey.
+
+Embark on a profound journey of self-revelation as Nakshtravani harmonizes age-old astrological wisdom with state-of-the-art technology. Our application delivers a seamless gateway to dive into the enigmas of the cosmos, presenting you with personalized revelations and counsel finely attuned to your birth chart.
+<hr>
+</p>
           <p>
-            Praesent auctor rhoncus arcu, vitae blandit est vestibulum sit amet. Integer erat
-            turpis, vestibulum pellentesque aliquam ultricies, finibus nec dui. Donec bibendum
-            enim mi, at tristique leo feugiat at. Thank you for visiting Template Mo.
+
+          <center><h3>Key Features:</h3></center>
+            <hr>
+            <br>
+          1. *Precise Birth Chart Analysis*: Unearth the significance of your birth chart as Nakshtravani calculates the exact positions of planets and stars at the moment of your birth, revealing the blueprint of your life's potential.
+            <hr>
+            <br>
+          2. *Daily Horoscope*: Receive insightful daily horoscopes crafted by experienced astrologers, empowering you with foresight and inspiration for each day's journey.
+            <hr>
+            <br>
+          3. *Customized Readings*: Delve into comprehensive and tailored astrological readings that cover diverse aspects of your life, including love, career, finances, and more.
+            <hr>
+            <br>
+
+          4. *Compatibility Insights*: Gain valuable insights into your compatibility with others, whether in friendships, partnerships, or romantic relationships, to nurture harmonious connections.
+            <hr>
+            <br>
+
+          5. *Transit Forecasts*: Stay prepared for the shifts in cosmic energy with our accurate transit forecasts, helping you make informed decisions during pivotal life moments.
+          <br>
+
+          6. *Lunar Phases and Eclipses*: Track the moon's phases and eclipses to sync your actions with the rhythms of the universe, optimizing your efforts and intentions.
+            <hr>
+            <br>
+
+          7. *Astro-Remedies*: Discover personalized remedies and suggestions to balance your energies and overcome challenges, drawing from time-honored astrological practices.
+          <br>
+            <hr>
+          8. *Community and Guidance*: Connect with a vibrant community of like-minded individuals, share experiences, and seek advice from seasoned astrologers to enhance your journey.
+            <hr>
+            <br>
+          Nakshtravani is more than a website it's a cosmic companion that empowers you to align your life with the celestial currents. Whether you're a seasoned astrology enthusiast or just embarking on your astrological voyage, Nakshtravani is here to guide you through the constellations of your destiny.
           </p>
         </div>              
       </div>
@@ -177,10 +208,10 @@
               at tristique leo feugiat at.
             </p>
             <div>
-              Email: <a href="mailto:info@company.com" class="tm-link-white">info@company.com</a>
+              Email: <a href="mailto:Info@nakshtravani.com" class="tm-link-white">Info@nakshtravani.com</a>
             </div>
             <div class="tm-mb-45">
-              Tel: <a href="tel:0100200340" class="tm-link-white">010-020-0340</a>
+              Tel: <a href="tel:+91 522-3179244" class="tm-link-white">+91 522-3179244</a>
             </div>
             <!-- Map -->
             <div class="map-outer">
@@ -197,23 +228,25 @@
   </ul>
  {% endblock post %}
 {%block some %}
+<link rel="stylesheet" href="{% static 'css/corocel.css' %}" >
+
 <div class="circle intro-circle-1"></div>
 <div class="circle intro-circle-2"></div>
  
-<div class="owl-carousel" id="slider1">
+<div class="owl-carousel container" id="slider1">
     <div class="mx-auto tm-border-top gallery-slider">
     {% for astro in astro %}
-    <figure class="effect-julia item">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB0Z3c67AijbqJUL577RkHCUVre6py94Ez_Q&usqp=CAU" alt="" height="200px">
-        
-        <figcaption>
-            <div>
-                <p>{{astro.user}} </p>
-                <br><span type="button" class="btn btn-success  btn-sm" style="font-size: 12px; padding: 5px 10px;" height="5px">chat</span>
-            </div>
-            <a href="#">View more</a>
-        </figcaption>
-    </figure>
+      <figure class="effect-julia item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYB3U3lweJZrnHcjO7ubFYmVgy7MFAsZdfGQ&usqp=CAU" alt="" height="200px">
+          
+          <figcaption>
+              <div>
+                  <p>{{astro.Name}} </p>
+                  <br><span type="button" class="btn btn-success  btn-sm" style="font-size: 12px; padding: 5px 10px;" height="5px">chat</span>
+              </div>
+              <a href="{% url 'detailpooja' pooja_id=astro.id %}">View more</a>
+          </figcaption>
+      </figure>
     {% endfor %}
   </div>
 </div>

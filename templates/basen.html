@@ -22,7 +22,7 @@ https://templatemo.com/tm-560-astro-motion
 </head>
 <body>
     <video autoplay muted loop id="bg-video">
-        <source src="{% static 'video/bg-universe.mp4' %}" type="video/mp4">
+        {% comment %} <source src="{% static 'video/bg-universe.mp4' %}" type="video/mp4"> {% endcomment %}
     </video>
     <div class="page-container">
       <div class="container-fluid">
@@ -89,6 +89,7 @@ https://templatemo.com/tm-560-astro-motion
     </div>
     <div class="container-fluid">
       <footer class="row mx-auto tm-footer">
+        
         <div class="col-md-6 px-0">
           Copyright 2021 Nachatra Company Limited. All rights reserved.
         </div>

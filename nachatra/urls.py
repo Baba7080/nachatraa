@@ -22,10 +22,15 @@ from .forms import LoginForm
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
+from astro.tests import *
+from astro.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",home,name="home"),
     path('login/',auth_views.LoginView.as_view(template_name='login.html',authentication_form=LoginForm),name='login'),
     path('register/user/', user_registration, name='user_registration'),
     path('register/seller/', seller_registration, name='seller_registration'),
+    path('pooja/<int:pooja_id>/', detail_pooja, name='detailpooja'),
+    path('bookpooja/<int:pooja_id>/',save_puja,name='bookpooja'),
+    path('aboutUs/',about,name='aboutUs')
 ]

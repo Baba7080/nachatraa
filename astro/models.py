@@ -20,3 +20,28 @@ class Profile(models.Model):
 
     def __str__(self):
         return f"{self.user.username}-{self.code}"
+
+class Pooja(models.Model):
+    id = models.AutoField(primary_key=True)
+    Name = models.CharField(max_length=25,blank=False)
+    description =models.TextField(blank=False)
+    benifit = models.CharField(max_length=1000,blank=False)
+    price = models.IntegerField(blank=True)
+    image = models.ImageField(default='deafault.jpeg', upload_to='poojatype')
+    # is_pro = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.Name}"
+
+from django import forms
+
+class PujaForm(models.Model):
+    userName = models.CharField(max_length=100)
+    mail = models.EmailField()
+    phoneNo = models.CharField(max_length=10)
+    selectedDate = models.DateField()
+    selectedTime = models.TimeField()
+    puja_id = models.IntegerField()
+
+    def __str__(self):
+        return self.userName 
